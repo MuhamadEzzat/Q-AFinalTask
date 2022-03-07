@@ -11,18 +11,25 @@ import UIKit
 extension StackoverflowListVC: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.datasource?.items.count ?? self.olddatasource.count
+        return self.datasource?.items.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        if datasource?.items == nil {
-            cell.textLabel?.text = self.olddatasource[indexPath.row].title
-        }else{
+        if datasource?.items != nil {
             cell.textLabel?.text = self.datasource?.items[indexPath.row].title
         }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let nextStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = nextStoryboard.instantiateViewController(withIdentifier: "AnswersDetailsVC") as! AnswersDetailsVC
+        
+        vc.datasource = self.datasource?.items[indexPath.row]
+        vc.datacontroller = datacontroller
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func getcurrenttime(){

@@ -38,12 +38,12 @@ class AppClient{
           if error != nil { // Handle error…
               return
           }
-            print(String(data: data!, encoding: .utf8)!)
+            print(String(data: data!, encoding: .utf8)!, "dsferfe")
             do{
                 let decoder = JSONDecoder()
                 let model = try decoder.decode(_Data.self, from: data!)
                 completion(model, nil)
-                print(model.items, "DDSDS")
+                
             }catch{
                 print(error.localizedDescription)
             }

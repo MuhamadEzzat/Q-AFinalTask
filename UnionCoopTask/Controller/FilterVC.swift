@@ -25,6 +25,12 @@ class FilterVC: UIViewController {
     func getFilters(){
         AppClient.getAnswers(activityindicator: loader, min: Int(self.minTF.text!), tagged: self.tagTF.text, fromdate: "1604209341", todate: "1604209341") { data, error in
             self.getfiltersdelegate?.getFilters(datasource: data)
+            if error == nil{
+                DispatchQueue.main.sync {
+                    self.navigationController?.popViewController(animated: true)
+                }
+                
+            }
         }
     }
     

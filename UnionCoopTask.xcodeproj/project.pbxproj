@@ -19,9 +19,10 @@
 		4A81A94F27901FF200CB4680 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A81A94E27901FF200CB4680 /* Items.swift */; };
 		4A81A9532790227200CB4680 /* AppClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A81A9522790227200CB4680 /* AppClient.swift */; };
 		4A81A95A27902C2800CB4680 /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A81A95927902C2800CB4680 /* FilterVC.swift */; };
-		4A81A95E27902F2400CB4680 /* OldData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A81A95D27902F2400CB4680 /* OldData.swift */; };
-		4A81A96027902F5E00CB4680 /* OldDataCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A81A95F27902F5E00CB4680 /* OldDataCoreData.swift */; };
 		4A81A9632790333100CB4680 /* FilterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A81A9622790333100CB4680 /* FilterProtocol.swift */; };
+		4AA9599F27D5AFAF00291B3D /* SavedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA9599E27D5AFAF00291B3D /* SavedVC.swift */; };
+		4AA959A527D5BC0E00291B3D /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA959A427D5BC0D00291B3D /* DataController.swift */; };
+		4ABF6FE527CBB2AC005BD9B3 /* AnswersDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABF6FE427CBB2AC005BD9B3 /* AnswersDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,9 +40,10 @@
 		4A81A94E27901FF200CB4680 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		4A81A9522790227200CB4680 /* AppClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppClient.swift; sourceTree = "<group>"; };
 		4A81A95927902C2800CB4680 /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
-		4A81A95D27902F2400CB4680 /* OldData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldData.swift; sourceTree = "<group>"; };
-		4A81A95F27902F5E00CB4680 /* OldDataCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldDataCoreData.swift; sourceTree = "<group>"; };
 		4A81A9622790333100CB4680 /* FilterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterProtocol.swift; sourceTree = "<group>"; };
+		4AA9599E27D5AFAF00291B3D /* SavedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedVC.swift; sourceTree = "<group>"; };
+		4AA959A427D5BC0D00291B3D /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		4ABF6FE427CBB2AC005BD9B3 /* AnswersDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +92,7 @@
 		4A81A95427902B6D00CB4680 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4A81A95D27902F2400CB4680 /* OldData.swift */,
-				4A81A95F27902F5E00CB4680 /* OldDataCoreData.swift */,
+				4AA959A427D5BC0D00291B3D /* DataController.swift */,
 				4A81A94E27901FF200CB4680 /* Items.swift */,
 				4A81A94C27901FA100CB4680 /* _Data.swift */,
 				4A81A9522790227200CB4680 /* AppClient.swift */,
@@ -104,6 +105,8 @@
 			children = (
 				4A81A95927902C2800CB4680 /* FilterVC.swift */,
 				4A81A93727901B3000CB4680 /* StackoverflowListVC.swift */,
+				4ABF6FE427CBB2AC005BD9B3 /* AnswersDetailsVC.swift */,
+				4AA9599E27D5AFAF00291B3D /* SavedVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -217,11 +220,12 @@
 				4A81A93827901B3000CB4680 /* StackoverflowListVC.swift in Sources */,
 				4A81A94D27901FA100CB4680 /* _Data.swift in Sources */,
 				4A81A9532790227200CB4680 /* AppClient.swift in Sources */,
-				4A81A95E27902F2400CB4680 /* OldData.swift in Sources */,
+				4AA9599F27D5AFAF00291B3D /* SavedVC.swift in Sources */,
+				4ABF6FE527CBB2AC005BD9B3 /* AnswersDetailsVC.swift in Sources */,
+				4AA959A527D5BC0E00291B3D /* DataController.swift in Sources */,
 				4A81A95A27902C2800CB4680 /* FilterVC.swift in Sources */,
 				4A81A93427901B3000CB4680 /* AppDelegate.swift in Sources */,
 				4A81A93627901B3000CB4680 /* SceneDelegate.swift in Sources */,
-				4A81A96027902F5E00CB4680 /* OldDataCoreData.swift in Sources */,
 				4A81A94F27901FF200CB4680 /* Items.swift in Sources */,
 				4A81A94B27901E6100CB4680 /* StackOverflowEx.swift in Sources */,
 				4A81A93E27901B3000CB4680 /* UnionCoopTask.xcdatamodeld in Sources */,
@@ -376,6 +380,7 @@
 				DEVELOPMENT_TEAM = V6EW4588HN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UnionCoopTask/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Software Q&A ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -404,6 +409,7 @@
 				DEVELOPMENT_TEAM = V6EW4588HN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UnionCoopTask/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Software Q&A ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

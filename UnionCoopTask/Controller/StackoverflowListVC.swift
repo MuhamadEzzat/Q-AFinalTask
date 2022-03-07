@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class StackoverflowListVC: UIViewController, FilterDelegates {
 
@@ -14,20 +15,22 @@ class StackoverflowListVC: UIViewController, FilterDelegates {
     @IBOutlet weak var loader: UIActivityIndicatorView!
     
     var datasource : _Data?
-    var olddatasource = OldDataCoreData.getData().0
     var currentdate = ""
     var lastdate = ""
+    
+    var datacontroller : DataController!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loader.stopAnimating()
-        OldDataCoreData.deleteData()
         buttonShaping()
         getcurrenttime()
         // Do any additional setup after loading the view.
         getData()
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        getData()
+    }
 
     func getFilters(datasource: _Data) {
         DispatchQueue.main.async {
@@ -42,9 +45,6 @@ class StackoverflowListVC: UIViewController, FilterDelegates {
             self.datasource = data
             DispatchQueue.main.async {
                 self.tbl.reloadData()
-                for i in data.items{
-                    OldDataCoreData.addData(title: i.title)
-                }
             }
         }
     }
@@ -58,5 +58,11 @@ class StackoverflowListVC: UIViewController, FilterDelegates {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func openSaved(_ sender: Any) {
+        let nextStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = nextStoryboard.instantiateViewController(withIdentifier: "SavedVC") as! SavedVC
+        vc.datacontroller = datacontroller
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
